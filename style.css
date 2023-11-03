@@ -1,123 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
 :root {
-  --color-tomato: hsl(4, 100%, 67%);
-  --color-dark-slate-grey: hsl(234, 29%, 20%);
-  --color-charcoal-grey: hsl(235, 18%, 26%);
-  --color-grey: hsl(231, 7%, 60%);
+  --color-orange: hsl(25, 97%, 53%);
   --color-white: hsl(0, 0%, 100%);
-  --color-gradient-final: #ff673d;
-  --color-gradient-start: #ff5274;
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-medium-grey: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+  --color-circle-grey: hsl(219, 11%, 24%);
 }
 
 body {
-  background-color: var(--color-charcoal-grey);
-  font-family: "Roboto", sans-serif;
+  background-color: var(--color-very-dark-blue);
 }
 
-.hidden {
-  display: none !important;
+.hidden{
+  display: none!important;
 }
 
-.container {
+
+#container {
+  display: flex;
   height: 100vh;
   width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container-thank {
   display: flex;
+  height: 100vh;
+  width: 100vw;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
 
 .content-wrap {
-  background-color: var(--color-white);
-  height: 630px;
-  width: 840px;
-  border-radius: 20px;
+  background-color: var(--color-dark-blue);
+  height: 350px;
+  width: 350px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.content-wrap-thank{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-dark-blue);
+  height: 350px;
+  width: 350px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+#icon {
+  background-color: var(--color-circle-grey);
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-container {
-  width: 400px;
-  height: 593px;
+#start-header {
+  color: var(--color-white);
+  margin-bottom: 10px;
 }
 
-.main-img {
-  height: 100%;
-  width: 100%;
-}
-
-.form {
-  height: 593px;
-  width: 400px;
-  padding: 50px;
-}
-
-.main-header {
-  color: var(--color-dark-slate-grey);
-  font-size: 40px;
+#start-p {
+  color: var(--color-light-grey);
   margin-bottom: 20px;
-}
-
-.main-para {
   font-size: 13px;
-  margin-bottom: 20px;
+  line-height: 20px;
 }
 
-.list-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100px;
+.img-thank{
   margin-bottom: 30px;
 }
 
-.p-list-item {
+#header-thank{
+  color: var(--color-white);
+  margin-bottom: 15px;
+}
+
+#div-p-thank{
   display: flex;
   align-items: center;
-  font-size: 13px;
-}
-
-.img-list {
-  margin-right: 15px;
-}
-
-.label {
-  font-size: 13px;
-  margin-bottom: 10px;
-  color: var(--color-dark-slate-grey);
-  font-weight: bold;
-}
-
-.input-div {
-  display: flex;
   flex-direction: column;
 }
 
-.input-email {
-  width: 300px;
-  height: 50px;
-  border: solid 1px var(--color-grey);
-  padding: 15px;
-  color: var(--color-grey);
-  border-radius: 5px;
-  margin-bottom: 20px;
+.p-thank{
+  color: var(--color-light-grey);
+  font-size: 13px;
 }
 
-#btnSubscribe{
-  width: 300px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: var(--color-dark-slate-grey);
+.container-button {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+#rating{
+  background-color: var(--color-circle-grey);
+  color: var(--color-orange);
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+#p-rating{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.button-star {
+  background-color: var(--color-circle-grey);
+  color: var(--color-light-grey);
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+}
+
+.button-star:hover {
+  background-color: var(--color-orange);
   color: var(--color-white);
-  font-weight: bold;
-}
-
-#btnSubscribe:hover{
-  background: linear-gradient(90deg, rgba(255,82,116,1) 0%, rgba(255,103,61,1) 100%);
   cursor: pointer;
 }
 
+.button-star-active{
+  background-color: var(--color-medium-grey);
+  color: var(--color-white);
+}
 
+#button-submit {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  text-transform: uppercase;
+  width: 300px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+#button-submit:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange);
+  cursor: pointer;
+}
 
 .attribution {
   font-size: 11px;
