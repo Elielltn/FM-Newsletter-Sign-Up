@@ -1,0 +1,128 @@
+:root {
+  --color-tomato: hsl(4, 100%, 67%);
+  --color-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-charcoal-grey: hsl(235, 18%, 26%);
+  --color-grey: hsl(231, 7%, 60%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gradient-final: #ff673d;
+  --color-gradient-start: #ff5274;
+}
+
+body {
+  background-color: var(--color-charcoal-grey);
+  font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-wrap {
+  background-color: var(--color-white);
+  height: 630px;
+  width: 840px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  width: 400px;
+  height: 593px;
+}
+
+.main-img {
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  height: 593px;
+  width: 400px;
+  padding: 50px;
+}
+
+.main-header {
+  color: var(--color-dark-slate-grey);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.main-para {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.p-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.img-list {
+  margin-right: 15px;
+}
+
+.label {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: var(--color-dark-slate-grey);
+  font-weight: bold;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-email {
+  width: 300px;
+  height: 50px;
+  border: solid 1px var(--color-grey);
+  padding: 15px;
+  color: var(--color-grey);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#btnSubscribe{
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--color-dark-slate-grey);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+#btnSubscribe:hover{
+  background: linear-gradient(90deg, rgba(255,82,116,1) 0%, rgba(255,103,61,1) 100%);
+  cursor: pointer;
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
