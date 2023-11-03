@@ -5,76 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Frontend Mentor | Interactive rating component</title>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
   </head>
   <body>
-    <!-- Rating state start -->
-    <div id="container" class="">
+    <!-- Sign-up form start -->
+    <div id="mainContainer" class="container">
       <div class="content-wrap">
-        <div id="icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 576 512"
-          >
-            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <style>
-              svg {
-                fill: #fb7413;
-              }
-            </style>
-            <path
-              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-            />
-          </svg>
-        </div>
-        <h1 id="start-header">How did we do?</h1>
-        <p id="start-p">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <div class="container-button">
-          <button class="button-star" id="button-1">1</button>
-          <button class="button-star" id="button-2">2</button>
-          <button class="button-star" id="button-3">3</button>
-          <button class="button-star" id="button-4">4</button>
-          <button class="button-star" id="button-5">5</button>
-        </div>
-        <button id="button-submit">Submit</button>
-      </div>
-    </div>
-
-    <div id="container-thank" class="hidden">
-      <div class="content-wrap-thank">
-        <img
-          class="img-thank"
-          src="/images/illustration-thank-you.svg"
-          alt="thank-you-ilustration"
-        />
-        <div id="rating"><p id="p-rating">You selected 3 out of 5</p></div>
-        <h1 id="header-thank">Thank you!</h1>
-        <div id="div-p-thank">
-          <p class="p-thank">
-            We appreciate you taking the time to give a rating.
+        <div class="form">
+          <h1 class="main-header">Stay updated!</h1>
+          <p class="main-para">
+            Join 60,000+ product managers receiving monthly updates on:
           </p>
-          <p class="p-thank">If you ever need more support, don’t hesitate to</p>
-          <p class="p-thank">get in touch!</p>
+          <div class="list-container">
+            <div class="list-item">
+              <p class="p-list-item">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                  class="img-list"
+                />Product discovery and building what matters
+              </p>
+            </div>
+            <div class="list-item">
+              <p class="p-list-item">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                  class="img-list"
+                />Measuring to ensure update are a success
+              </p>
+            </div>
+            <div class="list-item">
+              <p class="p-list-item">
+                <img
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                  class="img-list"
+                />And much more!
+              </p>
+            </div>
+          </div>
+          <div class="input-div">
+            <div class="labels">
+              <label for="email" class="label">Email address</label>
+              <p class="validation-p hidden">Valid email required</p>
+            </div>
+            <input
+              class="input-email"
+              type="email"
+              name="email"
+              placeholder="email@company.com"
+            />
+          </div>
+          <button id="btnSubscribe">Subscribe to monthly newsletter</button>
+        </div>
+        <div class="img-container">
+          <img
+            class="main-img"
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="img"
+          />
         </div>
       </div>
+
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Elielltn">Eliel Lucas</a>.
+      </div>
     </div>
+    <div id="thanksContainer" class="container hidden">
+      <div class="thanks-content-wrap">
+        <img class="thanks-img" src="./assets/images/icon-success.svg" alt="">
+        <h1 class="thanks-header">Thanks for subscribing!</h1>
+        <p class="thanks-para">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="btnDismiss">Dismiss message</button>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Elielltn">Eliel Lucas</a>.
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
